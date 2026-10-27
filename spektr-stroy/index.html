@@ -24,8 +24,8 @@ a{color:inherit;text-decoration:none}
 .btn:hover{background:var(--ink);color:var(--bg)}
 .btn.fill{background:var(--ink);color:var(--bg);border-color:var(--ink)}.btn.fill:hover{background:var(--olive);border-color:var(--olive)}
 /* header */
-.hdr{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px var(--pad);transition:background .4s,padding .4s}
-.hdr.on{background:rgba(242,240,237,.92);backdrop-filter:blur(10px);padding:14px var(--pad);border-bottom:1px solid var(--line)}
+.hdr{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px max(var(--pad),calc((100vw - 1680px)/2 + var(--pad)));transition:background .4s,padding .4s}
+.hdr.on{background:rgba(242,240,237,.92);backdrop-filter:blur(10px);padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
 .logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:500;letter-spacing:-.01em}
 .nav{display:flex;gap:34px}.nav a{font-size:12px;letter-spacing:.2em;text-transform:uppercase}
 .nav a:hover{color:var(--taupe)}
@@ -34,9 +34,21 @@ a{color:inherit;text-decoration:none}
 .hero{position:relative;padding-top:130px;min-height:100vh}
 .hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:end}
 .hero-img{height:min(76vh,820px);overflow:hidden;position:relative}
-.hero-img img{width:100%;height:115%;object-fit:cover}
-.hero h1{font-size:clamp(50px,12.5vw,220px);position:relative;z-index:2;margin-top:clamp(16px,3vw,40px);white-space:nowrap}
-.hero h1 .l2{display:block;padding-left:.6em;font-style:italic}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.slide.on{opacity:1;z-index:1}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 7s linear}
+.slide.on img{transform:scale(1)}
+.sl-ui{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;align-items:center;gap:18px;padding:60px 24px 20px;background:linear-gradient(transparent,rgba(5,5,5,.55));color:#f2f0ed}
+.sl-n{font-family:"Cormorant Garamond",serif;font-size:22px;white-space:nowrap}
+.sl-cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.sl-bar{flex:1;height:1px;background:rgba(242,240,237,.35);position:relative;overflow:hidden;min-width:40px}
+.sl-bar i{position:absolute;inset:0;background:#f2f0ed;transform-origin:left;transform:scaleX(0)}
+.sl-bar i.run{animation:slbar 5.5s linear forwards}
+@keyframes slbar{to{transform:scaleX(1)}}
+.sl-btn{width:44px;height:44px;border:1px solid rgba(242,240,237,.6);border-radius:50%;display:grid;place-items:center;background:none;color:inherit;cursor:pointer;font-size:18px;transition:background .3s,color .3s;flex:0 0 auto}
+.sl-btn:hover{background:#f2f0ed;color:#050505}
+.hero h1{font-size:clamp(52px,6vw,115px);position:relative;z-index:2;margin-top:clamp(16px,3vw,40px);white-space:nowrap}
+.hero h1 .l2{display:block;padding-left:.45em;font-style:italic}
 .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.12em .14em .26em 0;margin:-.12em -.14em -.26em 0}
 .hero h1 .w span{display:inline-block}
 .hero-meta{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;padding-bottom:10px}
@@ -93,7 +105,9 @@ a{color:inherit;text-decoration:none}
  .hero{min-height:0}
  .hero-grid,.intro,.ct-grid{grid-template-columns:minmax(0,1fr)}
  .hero-img{height:auto;aspect-ratio:1/1;order:-1}
- .hero h1{font-size:clamp(46px,14vw,120px)}
+ .hero h1{font-size:clamp(44px,13vw,100px)}
+ .sl-cap{display:none}
+ .sl-ui{padding:50px 14px 14px;gap:12px}
  .hero h1 .l2{padding-left:.35em}
  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
  .stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -122,7 +136,15 @@ html.js [data-r]{opacity:0;transform:translateY(36px)}
       <p data-r>Ремонт квартир и&nbsp;помещений. Также кровельные, электромонтажные и&nbsp;фасадные работы, строим бани и&nbsp;сауны.</p>
       <div data-r style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn fill" href="https://wa.me/79144177334" target="_blank" rel="noopener">Обсудить ремонт</a><a class="btn" href="#projects">Смотреть объекты</a></div>
     </div>
-    <div class="hero-img"><img id="heroImg" src="img/p22.webp" alt="Гостиная с кухней после ремонта" fetchpriority="high"></div>
+    <div class="hero-img" id="slider">
+      <figure class="slide on" data-cap="Кухня-гостиная"><img src="img/p22.webp" alt="Кухня-гостиная с серым диваном" fetchpriority="high"></figure>
+      <figure class="slide" data-cap="Гостиная"><img src="img/p16.webp" alt="Гостиная с подсветкой потолка"></figure>
+      <figure class="slide" data-cap="Кухня"><img src="img/p20.webp" alt="Кухня с барной стойкой"></figure>
+      <figure class="slide" data-cap="Ванная комната"><img src="img/p21.webp" alt="Ванная с зеркалом с подсветкой"></figure>
+      <figure class="slide" data-cap="Кухня-гостиная"><img src="img/p47.webp" alt="Кухня-гостиная с деревянной колонной"></figure>
+      <figure class="slide" data-cap="Ванная комната"><img src="img/p17.webp" alt="Ванная с отдельно стоящей ванной у окна"></figure>
+      <div class="sl-ui"><span class="sl-n"><b id="slN">01</b> / 06</span><span class="sl-cap" id="slCap">Кухня-гостиная</span><span class="sl-bar"><i id="slBar"></i></span><button class="sl-btn" id="slPrev" aria-label="Предыдущее фото">←</button><button class="sl-btn" id="slNext" aria-label="Следующее фото">→</button></div>
+    </div>
   </div>
   <div class="stats" data-r>
     <div><b>4,6</b><span>оценка в&nbsp;2ГИС</span></div>
@@ -205,6 +227,16 @@ html.js [data-r]{opacity:0;transform:translateY(36px)}
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 (function(){
+  var sl=document.getElementById('slider'),sd=[].slice.call(sl.querySelectorAll('.slide')),cur=0,tm,bar=document.getElementById('slBar');
+  function go(n){sd[cur].classList.remove('on');cur=(n+sd.length)%sd.length;sd[cur].classList.add('on');
+    document.getElementById('slN').textContent=('0'+(cur+1)).slice(-2);document.getElementById('slCap').textContent=sd[cur].dataset.cap;
+    bar.classList.remove('run');void bar.offsetWidth;bar.classList.add('run');clearTimeout(tm);tm=setTimeout(function(){go(cur+1)},5500)}
+  document.getElementById('slPrev').onclick=function(){go(cur-1)};document.getElementById('slNext').onclick=function(){go(cur+1)};
+  var x0=null;sl.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  sl.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));x0=null});
+  go(0);
+})();
+(function(){
   var hdr=document.getElementById('hdr');
   addEventListener('scroll',function(){hdr.classList.toggle('on',scrollY>30)},{passive:true});
   if(!window.gsap){document.documentElement.classList.remove('js');return}
@@ -215,8 +247,6 @@ html.js [data-r]{opacity:0;transform:translateY(36px)}
 
   gsap.from('.hero h1 .w span',{yPercent:150,duration:1.4,ease:'expo.out',stagger:.12,delay:.15});
   gsap.fromTo('.hero-img',{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:1.5,ease:'expo.inOut'});
-  gsap.fromTo('#heroImg',{scale:1.3},{scale:1,duration:2,ease:'expo.out'});
-  gsap.to('#heroImg',{yPercent:-10,ease:'none',scrollTrigger:{trigger:'.hero-img',start:'top top',end:'bottom top',scrub:true}});
 
   gsap.utils.toArray('[data-r]').forEach(function(el){
     gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});

@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 .chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--white);padding:8px 16px;font-size:14px;font-weight:600}
 .chip b{color:var(--pink)}
 /* header */
-.hdr{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .3s}
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px max(var(--pad),calc((100vw - 1600px)/2 + var(--pad)));display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .3s}
 .hdr.on{background:rgba(232,230,227,.86);backdrop-filter:blur(12px)}
 .logo{font-family:Unbounded;font-weight:700;font-size:22px;letter-spacing:-.04em}
 .logo span{color:var(--pink)}
@@ -34,17 +34,32 @@ a{color:inherit;text-decoration:none}
 .nav a:hover{background:var(--bg)}
 .hdr .pill{padding:11px 20px}
 /* hero */
-.hero{padding-top:120px;padding-bottom:40px}
-.hero h1{font-size:clamp(36px,12.4vw,190px)}
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding-top:clamp(84px,11vh,112px);padding-bottom:clamp(14px,2.6vh,28px)}
+.hero-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hero h1{font-size:clamp(36px,min(6.4vw,12vh),100px)}
 .hero h1 .ln{display:block;overflow:hidden;padding:.12em 0 .24em;margin:-.12em 0 -.24em}
 .hero h1 .ln span{display:inline-block}
 .hero h1 .pk{color:var(--pink)}
-.hero-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(20px,3vw,48px);margin-top:clamp(28px,4vw,56px);align-items:end}
-.hero-txt p{font-size:clamp(17px,1.5vw,21px);max-width:440px;margin-bottom:24px}
-.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.hero h1 .br{display:none}
+.rate{background:var(--white);border-radius:var(--r);padding:clamp(16px,2vh,24px) clamp(20px,2vw,30px);display:flex;align-items:center;gap:18px;flex:0 0 auto;margin-bottom:.4em}
+.rate b{font-family:Unbounded;font-weight:500;font-size:clamp(34px,min(4vw,7vh),68px);letter-spacing:-.05em;line-height:1}
+.rate b i{font-style:normal;color:var(--pink)}
+.rate span{font-weight:600;font-size:15px;line-height:1.3;color:var(--mut)}
+.rate span strong{color:var(--ink);display:block;font-size:17px}
+.hero-body{flex:1;display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.62fr);gap:14px;margin-top:clamp(16px,3vh,36px);min-height:340px}
+.hero-txt{background:var(--white);border-radius:var(--r);padding:clamp(22px,2.4vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.hero-txt p{font-size:clamp(17px,1.35vw,22px);line-height:1.45}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px}
+.hero-chips .chip{background:var(--bg)}
 .hero-btns{display:flex;flex-wrap:wrap;gap:10px}
-.hero-img{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
-.hero-img img{width:100%;height:118%;object-fit:cover}
+.hq{border-left:3px solid var(--pink);padding-left:16px}
+.hq blockquote{font-family:Unbounded;font-weight:500;font-size:clamp(17px,1.35vw,22px);letter-spacing:-.03em;line-height:1.25}
+.hq figcaption{margin-top:10px;font-size:13px;font-weight:600;color:var(--mut)}
+.hq .stars{font-size:12px}
+@media (min-width:901px) and (max-width:1180px),(min-width:901px) and (max-height:800px){.hq{display:none}}
+.hero-img{border-radius:var(--r);overflow:hidden;position:relative;min-height:300px}
+.hero-img img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;object-position:center 60%}
+.sticker{position:absolute;left:20px;bottom:20px;z-index:2;background:var(--pink);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px}
 /* marquee */
 .mq-wrap{overflow:hidden;padding:30px 0;margin:clamp(20px,4vw,60px) 0}
 .mq{background:var(--pink);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.5deg) scaleX(1.04)}
@@ -99,8 +114,14 @@ a{color:inherit;text-decoration:none}
 .big{font-family:Unbounded;font-weight:700;font-size:clamp(60px,17vw,290px);letter-spacing:-.06em;line-height:.8;color:var(--pink);margin-top:clamp(40px,5vw,70px);white-space:nowrap}
 @media (max-width:900px){
  .nav{display:none}
- .hero-row,.svc,.ct-grid,.rv{grid-template-columns:minmax(0,1fr)}
- .hero-img{aspect-ratio:4/3}
+ .svc,.ct-grid,.rv,.hero-body{grid-template-columns:minmax(0,1fr)}
+ .hero{min-height:0}
+ .hero-head{flex-direction:column;align-items:flex-start;gap:18px}
+ .hero h1{font-size:clamp(36px,12.4vw,120px)}
+ .hero h1 .br{display:inline}
+ .rate{margin:0}
+ .hero-body{min-height:0}
+ .hero-img{aspect-ratio:4/3;min-height:0}
  .nums{grid-template-columns:minmax(0,1fr)}
  .card{min-height:0}
  .track{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
@@ -120,14 +141,18 @@ html:not(.js) .hero h1 .ln span{transform:none}
 
 <main id="top">
 <section class="hero wrap">
-  <h1 class="disp"><span class="ln"><span>Кузовной</span></span><span class="ln"><span>ремонт</span></span><span class="ln"><span>и&nbsp;<em class="pk" style="font-style:normal">покраска</em></span></span></h1>
-  <div class="hero-row">
+  <div class="hero-head">
+    <h1 class="disp"><span class="ln"><span>Кузовной ремонт</span></span><span class="ln"><span>и&nbsp;<em class="pk" style="font-style:normal">покраска</em></span></span></h1>
+    <div class="rate" data-r><b>5,0<i>★</i></b><span><strong>224 отзыва</strong>в&nbsp;2ГИС</span></div>
+  </div>
+  <div class="hero-body">
     <div class="hero-txt" data-r>
-      <div class="hero-chips"><span class="chip"><b>★ 5,0</b> в&nbsp;2ГИС</span><span class="chip">224 отзыва</span><span class="chip">каждый день 9:00–21:00</span></div>
-      <p>Хабаровск, Промышленная улица, 11/1. Работаем по&nbsp;предварительной записи.</p>
+      <div style="display:grid;gap:20px"><p>Бамперы, крылья, двери, капот, сколы и&nbsp;вмятины. Хабаровск, Промышленная улица, 11/1.</p>
+      <div class="hero-chips"><span class="chip">каждый день 9:00–21:00</span><span class="chip">по&nbsp;предварительной записи</span></div></div>
+      <figure class="hq"><blockquote>«Отремонтировали бампер, не&nbsp;отличить от&nbsp;нового!»</blockquote><figcaption><span class="stars">★★★★★</span> Марина Г., отзыв в&nbsp;2ГИС</figcaption></figure>
       <div class="hero-btns"><a class="pill pill-pink" href="https://wa.me/79244076666" target="_blank" rel="noopener">Написать в&nbsp;WhatsApp</a><a class="pill pill-line" href="tel:+79244076666">+7 924 407-66-66</a></div>
     </div>
-    <div class="hero-img"><img id="heroImg" src="img/p0.webp" alt="Чёрный спорткар после покраски у мастерской" fetchpriority="high"></div>
+    <div class="hero-img"><img id="heroImg" src="img/p29.webp" alt="Чёрный седан после покраски в цеху" fetchpriority="high"><span class="sticker">Фото из&nbsp;отзыва клиента</span></div>
   </div>
 </section>
 
