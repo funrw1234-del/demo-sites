@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>А888рт · кузовной ремонт и покраска в Хабаровске</title>
+<meta name="description" content="Кузовной ремонт и покраска автомобилей. Хабаровск, Промышленная улица, 11/1. Каждый день с 9 до 21, по записи.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+html,body{overflow-x:clip}
+:root{--bg:#e8e6e3;--ink:#191818;--mut:#6f6d6b;--line:#d1cfcb;--pink:#ff2c6b;--white:#fff;--r:28px;--pad:clamp(16px,4vw,56px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font:500 17px/1.55 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{padding:0 var(--pad);max-width:1600px;margin:0 auto}
+.disp{font-family:Unbounded,sans-serif;font-weight:500;letter-spacing:-.045em;line-height:.88}
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:14px 24px;font-weight:700;font-size:15px;transition:transform .25s,background .25s,color .25s;white-space:nowrap}
+.pill-pink{background:var(--pink);color:#fff}.pill-pink:hover{transform:translateY(-2px);background:#e5205d}
+.pill-line{border:1.5px solid var(--ink)}.pill-line:hover{background:var(--ink);color:var(--bg)}
+.chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--white);padding:8px 16px;font-size:14px;font-weight:600}
+.chip b{color:var(--pink)}
+/* header */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .3s}
+.hdr.on{background:rgba(232,230,227,.86);backdrop-filter:blur(12px)}
+.logo{font-family:Unbounded;font-weight:700;font-size:22px;letter-spacing:-.04em}
+.logo span{color:var(--pink)}
+.nav{display:flex;gap:6px;background:var(--white);border-radius:999px;padding:6px}
+.nav a{padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600}
+.nav a:hover{background:var(--bg)}
+.hdr .pill{padding:11px 20px}
+/* hero */
+.hero{padding-top:120px;padding-bottom:40px}
+.hero h1{font-size:clamp(36px,12.4vw,190px)}
+.hero h1 .ln{display:block;overflow:hidden;padding:.12em 0 .24em;margin:-.12em 0 -.24em}
+.hero h1 .ln span{display:inline-block}
+.hero h1 .pk{color:var(--pink)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(20px,3vw,48px);margin-top:clamp(28px,4vw,56px);align-items:end}
+.hero-txt p{font-size:clamp(17px,1.5vw,21px);max-width:440px;margin-bottom:24px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.hero-img{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
+.hero-img img{width:100%;height:118%;object-fit:cover}
+/* marquee */
+.mq-wrap{overflow:hidden;padding:30px 0;margin:clamp(20px,4vw,60px) 0}
+.mq{background:var(--pink);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.5deg) scaleX(1.04)}
+.mq-t{display:flex;width:max-content}
+.mq-t div{font-family:Unbounded;font-size:clamp(22px,3vw,40px);letter-spacing:-.03em;white-space:nowrap;padding-right:40px}
+/* services */
+.sec{padding-top:clamp(56px,8vw,120px);padding-bottom:clamp(56px,8vw,120px)}
+.lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--mut);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.lbl::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pink)}
+.h2{font-size:clamp(38px,6.2vw,96px)}
+.svc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px;margin-top:clamp(28px,4vw,56px)}
+.card{background:var(--white);border-radius:var(--r);padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:18px;min-height:340px}
+.card h3{font-family:Unbounded;font-weight:500;font-size:clamp(26px,2.6vw,40px);letter-spacing:-.035em;line-height:1}
+.card p{color:var(--mut);max-width:520px}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.card .tags span{border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+.card.dark{background:var(--ink);color:var(--bg)}
+.card.dark p{color:#a9a6a2}.card.dark .tags span{border-color:#3a3837}
+.card-img{border-radius:18px;overflow:hidden;aspect-ratio:16/9}
+.card-img img{width:100%;height:100%;object-fit:cover}
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.num{border-top:1.5px solid var(--ink);padding-top:18px}
+.num .v{font-family:Unbounded;font-size:clamp(56px,8vw,130px);letter-spacing:-.05em;line-height:.9}
+.num .v i{font-style:normal;color:var(--pink)}
+.num p{color:var(--mut);margin-top:10px;font-weight:600}
+/* gallery */
+.gal{overflow:hidden}
+.gal-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:clamp(24px,3vw,40px)}
+.gal-head p{color:var(--mut);max-width:380px}
+.track{display:flex;gap:14px;padding:0 var(--pad);width:max-content}
+.track figure{flex:0 0 auto;height:min(64vh,620px);border-radius:var(--r);overflow:hidden;background:#d6d3cf}
+.track img{height:100%;width:auto;object-fit:cover}
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:clamp(28px,4vw,56px)}
+.rv .card{min-height:0;gap:22px}
+.rv blockquote{font-size:clamp(17px,1.4vw,20px);line-height:1.5;color:var(--ink)}
+.rv .who{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px;margin-top:auto}
+.stars{color:var(--pink);letter-spacing:2px}
+.rv-more{margin-top:24px;display:flex;justify-content:center}
+/* contacts */
+.ct{background:var(--ink);color:var(--bg);border-radius:var(--r) var(--r) 0 0;padding:clamp(56px,8vw,120px) 0 40px;margin-top:clamp(40px,6vw,80px)}
+.ct .h2{color:#fff}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);margin-top:clamp(28px,4vw,56px)}
+.ct dl{display:grid;gap:22px}
+.ct dt{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8c8b8b;font-weight:700;margin-bottom:4px}
+.ct dd{font-size:clamp(20px,2vw,28px);font-weight:600;line-height:1.3}
+.ct dd a:hover{color:var(--pink)}
+.ct-btns{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.ct .pill-line{border-color:#fff;color:#fff}.ct .pill-line:hover{background:#fff;color:var(--ink)}
+.foot{margin-top:clamp(48px,6vw,90px);padding-top:22px;border-top:1px solid #333;color:#8c8b8b;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.big{font-family:Unbounded;font-weight:700;font-size:clamp(60px,17vw,290px);letter-spacing:-.06em;line-height:.8;color:var(--pink);margin-top:clamp(40px,5vw,70px);white-space:nowrap}
+@media (max-width:900px){
+ .nav{display:none}
+ .hero-row,.svc,.ct-grid,.rv{grid-template-columns:minmax(0,1fr)}
+ .hero-img{aspect-ratio:4/3}
+ .nums{grid-template-columns:minmax(0,1fr)}
+ .card{min-height:0}
+ .track{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+ .track figure{height:62vw;scroll-snap-align:start}
+}
+@media (max-width:420px){.hdr .pill span{display:none}.hdr .pill{padding:11px 14px}}
+html.js [data-r]{opacity:0;transform:translateY(40px)}
+html:not(.js) .hero h1 .ln span{transform:none}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <a class="logo" href="#top">А888<span>рт</span></a>
+  <nav class="nav"><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+  <a class="pill pill-pink" href="https://wa.me/79244076666" target="_blank" rel="noopener"><span>Записаться</span> →</a>
+</header>
+
+<main id="top">
+<section class="hero wrap">
+  <h1 class="disp"><span class="ln"><span>Кузовной</span></span><span class="ln"><span>ремонт</span></span><span class="ln"><span>и&nbsp;<em class="pk" style="font-style:normal">покраска</em></span></span></h1>
+  <div class="hero-row">
+    <div class="hero-txt" data-r>
+      <div class="hero-chips"><span class="chip"><b>★ 5,0</b> в&nbsp;2ГИС</span><span class="chip">224 отзыва</span><span class="chip">каждый день 9:00–21:00</span></div>
+      <p>Хабаровск, Промышленная улица, 11/1. Работаем по&nbsp;предварительной записи.</p>
+      <div class="hero-btns"><a class="pill pill-pink" href="https://wa.me/79244076666" target="_blank" rel="noopener">Написать в&nbsp;WhatsApp</a><a class="pill pill-line" href="tel:+79244076666">+7 924 407-66-66</a></div>
+    </div>
+    <div class="hero-img"><img id="heroImg" src="img/p0.webp" alt="Чёрный спорткар после покраски у мастерской" fetchpriority="high"></div>
+  </div>
+</section>
+
+<div class="mq-wrap" aria-hidden="true"><div class="mq"><div class="mq-t" id="mq"><div>Кузовной ремонт ✦ Покраска ✦ Бамперы ✦ Крылья ✦ Двери ✦ Капот ✦ Сколы и&nbsp;вмятины ✦ Ремонт ходовой ✦</div><div>Кузовной ремонт ✦ Покраска ✦ Бамперы ✦ Крылья ✦ Двери ✦ Капот ✦ Сколы и&nbsp;вмятины ✦ Ремонт ходовой ✦</div></div></div></div>
+
+<section class="sec wrap" id="services">
+  <div class="lbl">Услуги</div>
+  <h2 class="disp h2" data-r>Чтобы машина<br>была как новая</h2>
+  <div class="svc">
+    <article class="card" data-r>
+      <div class="card-img"><img src="img/p7.webp" alt="Свежая покраска крыши автомобиля в камере" loading="lazy"></div>
+      <h3>Кузовной ремонт и&nbsp;покраска</h3>
+      <p>Бамперы, крылья, двери, капот. Убираем сколы и&nbsp;вмятины, красим элементы и&nbsp;подбираем цвет под&nbsp;машину.</p>
+      <div class="tags"><span>Бампер</span><span>Крыло</span><span>Дверь</span><span>Капот</span><span>Сколы</span><span>Вмятины</span></div>
+    </article>
+    <article class="card dark" data-r>
+      <h3>Ремонт ходовой части</h3>
+      <p>Кроме кузова, занимаемся ходовой. Подробности и&nbsp;сроки уточняйте у&nbsp;мастера, когда записываетесь.</p>
+      <div class="card-img"><img src="img/p6.webp" alt="Колесо и арка после ремонта" loading="lazy"></div>
+      <div class="tags"><span>Подвеска</span><span>Ходовая</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="nums">
+    <div class="num" data-r><div class="v"><span data-count="5" data-dec="1">5,0</span><i>★</i></div><p>средняя оценка в&nbsp;2ГИС</p></div>
+    <div class="num" data-r><div class="v"><span data-count="224">224</span></div><p>отзыва от&nbsp;клиентов</p></div>
+    <div class="num" data-r><div class="v">7<i>/</i>7</div><p>без выходных, с&nbsp;9:00 до&nbsp;21:00</p></div>
+  </div>
+</section>
+
+<section class="sec gal" id="works">
+  <div class="wrap gal-head">
+    <div><div class="lbl">Работы</div><h2 class="disp h2" data-r>Машины после<br>ремонта</h2></div>
+    <p data-r>Фотографии из&nbsp;отзывов клиентов в&nbsp;2ГИС.</p>
+  </div>
+  <div class="track" id="track">
+    <figure><img src="img/p29.webp" alt="Чёрный седан после покраски в цеху" loading="lazy"></figure>
+    <figure><img src="img/p18.webp" alt="Серебристый кроссовер, передняя часть" loading="lazy"></figure>
+    <figure><img src="img/p14.webp" alt="Чёрный внедорожник, задняя часть" loading="lazy"></figure>
+    <figure><img src="img/p10.webp" alt="Белый седан на закате" loading="lazy"></figure>
+    <figure><img src="img/p31.webp" alt="Белый кроссовер в цеху" loading="lazy"></figure>
+    <figure><img src="img/p33.webp" alt="Блеск чёрного лака на переднем крыле" loading="lazy"></figure>
+    <figure><img src="img/p28.webp" alt="Чёрный внедорожник Lexus" loading="lazy"></figure>
+    <figure><img src="img/p38.webp" alt="Белый автомобиль, фара и бампер" loading="lazy"></figure>
+    <figure><img src="img/p36.webp" alt="Чёрный кузов, отражение в лаке" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="sec wrap" id="reviews">
+  <div class="lbl">Отзывы из&nbsp;2ГИС</div>
+  <h2 class="disp h2" data-r>Что пишут<br>клиенты</h2>
+  <div class="rv">
+    <article class="card" data-r><blockquote>«За пару дней и&nbsp;очень приемлемую цену вернули капот на&nbsp;место, покрасили его и&nbsp;даже мелкие вмятинки убрали, выглядит теперь как новый».</blockquote><div class="who"><span>Валерия Л.</span><span class="stars">★★★★★</span></div></article>
+    <article class="card" data-r><blockquote>«Весь процесс ремонта ребята постоянно были на&nbsp;связи, отсылали фото и&nbsp;видео ремонта. Очень рекомендую данный автосервис».</blockquote><div class="who"><span>Дмитрий</span><span class="stars">★★★★★</span></div></article>
+    <article class="card" data-r><blockquote>«Ремонтировал три разных машины. Качество и&nbsp;скорость на&nbsp;отличном уровне. В&nbsp;среднем ремонт 2–4 дня».</blockquote><div class="who"><span>Александр С.</span><span class="stars">★★★★★</span></div></article>
+    <article class="card" data-r><blockquote>«Сделали сразу на&nbsp;месте оба бампера за&nbsp;умеренную цену, напоили вкуснючим чаем с&nbsp;конфетами!»</blockquote><div class="who"><span>Ксения</span><span class="stars">★★★★★</span></div></article>
+  </div>
+  <div class="rv-more"><a class="pill pill-line" href="https://2gis.ru/khabarovsk/firm/70000001098516890/tab/reviews" target="_blank" rel="noopener">Все 224 отзыва в&nbsp;2ГИС</a></div>
+</section>
+</main>
+
+<footer class="ct" id="contacts">
+  <div class="wrap">
+    <div class="lbl" style="color:#8c8b8b">Контакты</div>
+    <h2 class="disp h2" data-r>Запишитесь<br>на&nbsp;осмотр</h2>
+    <div class="ct-grid">
+      <dl>
+        <div><dt>Адрес</dt><dd>Хабаровск, Промышленная улица, 11/1</dd></div>
+        <div><dt>Время работы</dt><dd>Каждый день с&nbsp;9:00 до&nbsp;21:00, по&nbsp;предварительной записи</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79244076666">+7 924 407-66-66</a></dd></div>
+        <div><dt>Оплата</dt><dd>Наличными или&nbsp;переводом с&nbsp;карты</dd></div>
+      </dl>
+      <div class="ct-btns">
+        <a class="pill pill-pink" href="https://wa.me/79244076666" target="_blank" rel="noopener">Написать в&nbsp;WhatsApp</a>
+        <a class="pill pill-line" href="https://2gis.ru/khabarovsk/firm/70000001098516890" target="_blank" rel="noopener">Маршрут в&nbsp;2ГИС</a>
+        <a class="pill pill-line" href="https://yandex.ru/maps/76/khabarovsk/?text=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2011%2F1%2C%20%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA" target="_blank" rel="noopener">Открыть в&nbsp;Яндекс Картах</a>
+      </div>
+    </div>
+    <div class="big" aria-hidden="true">А888рт</div>
+    <div class="foot"><span>Демо-версия сайта. Данные из&nbsp;открытой карточки 2ГИС.</span><a href="../">Другие демо-сайты</a></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('on',scrollY>20)},{passive:true});
+  if(!window.gsap){document.documentElement.classList.remove('js');return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({lerp:.1});lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-70})}})});
+
+  gsap.from('.hero h1 .ln span',{yPercent:150,duration:1.1,ease:'power4.out',stagger:.09,delay:.1});
+  gsap.fromTo('#heroImg',{scale:1.25},{scale:1,duration:1.6,ease:'power3.out'});
+  gsap.to('#heroImg',{yPercent:-12,ease:'none',scrollTrigger:{trigger:'.hero-img',start:'top bottom',end:'bottom top',scrub:true}});
+
+  gsap.to('#mq',{xPercent:-50,duration:22,ease:'none',repeat:-1});
+
+  gsap.utils.toArray('[data-r]').forEach(function(el){
+    gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var end=+el.dataset.count,dec=+(el.dataset.dec||0),o={v:0};
+    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:function(){
+      gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:function(){el.textContent=o.v.toFixed(dec).replace('.',',')}});
+    }});
+  });
+
+  ScrollTrigger.matchMedia({'(min-width: 901px)':function(){
+    var tr=document.getElementById('track');
+    gsap.to(tr,{x:function(){return -(tr.scrollWidth-innerWidth)},ease:'none',
+      scrollTrigger:{trigger:'.gal',start:'top top',end:function(){return '+='+(tr.scrollWidth-innerWidth)},scrub:1,pin:true,invalidateOnRefresh:true}});
+  }});
+  addEventListener('load',function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>

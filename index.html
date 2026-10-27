@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Демо-сайты · Хабаровск</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+html,body{overflow-x:clip}
+:root{--bg:#111110;--card:#1b1b19;--ink:#f3f1ec;--mut:#8e8b85;--line:#2c2b28;--pad:clamp(16px,4vw,56px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{color:var(--ink);font:400 16px/1.5 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.top{padding:clamp(48px,8vw,110px) 0 clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:end;border-bottom:1px solid var(--line)}
+.top h1{font-size:clamp(46px,8vw,128px);font-weight:500;letter-spacing:-.06em;line-height:.9}
+.top h1 span{color:var(--mut)}
+.top p{color:var(--mut);max-width:420px;font-size:17px}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,24px);padding:clamp(28px,4vw,56px) 0}
+.item{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,transform .4s}
+.item:hover{border-color:#55534e;transform:translateY(-4px)}
+.shot{aspect-ratio:16/10;overflow:hidden;background:#222}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.item:hover .shot img{transform:scale(1.04)}
+.meta{padding:22px 24px 26px;display:grid;gap:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.niche{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.style{font-size:12px;border:1px solid var(--line);padding:4px 10px;border-radius:99px;color:var(--mut)}
+.meta h2{font-size:clamp(28px,3vw,40px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.meta p{color:var(--mut)}
+.go{margin-top:6px;font-weight:500;display:inline-flex;gap:8px;align-items:center}
+.go i{font-style:normal;transition:transform .3s}.item:hover .go i{transform:translateX(6px)}
+.foot{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--mut);font-size:13px}
+@media (max-width:820px){.top,.list{grid-template-columns:minmax(0,1fr)}}
+html.js .item{opacity:0;transform:translateY(30px)}
+html.js .item.in{opacity:1;transform:none;transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1),border-color .3s}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Демо-сайты<br><span>для&nbsp;бизнеса Хабаровска</span></h1>
+    <p>Пробные сайты для&nbsp;компаний, у&nbsp;которых в&nbsp;2ГИС много отзывов и&nbsp;фотографий, а&nbsp;сайта нет. Тексты и&nbsp;фото взяты из&nbsp;их&nbsp;открытых карточек.</p>
+  </header>
+  <main class="list">
+    <a class="item" href="a888rt/">
+      <div class="shot"><img src="shots/a888rt.jpg" alt="Первый экран сайта А888рт"></div>
+      <div class="meta"><div class="row"><span class="niche">Кузовной ремонт</span><span class="style">стиль Waabi</span></div><h2>А888рт</h2><p>Промышленная улица, 11/1 · ★ 5,0 и&nbsp;224 отзыва в&nbsp;2ГИС</p><span class="go">Открыть сайт <i>→</i></span></div>
+    </a>
+    <a class="item" href="spektr-stroy/">
+      <div class="shot"><img src="shots/spektr-stroy.jpg" alt="Первый экран сайта Спектр Строй"></div>
+      <div class="meta"><div class="row"><span class="niche">Ремонт и&nbsp;стройка</span><span class="style">стиль Liron Moran Interiors</span></div><h2>Спектр Строй</h2><p>Улица Ленина, 57 · ★ 4,6 и&nbsp;46 отзывов в&nbsp;2ГИС</p><span class="go">Открыть сайт <i>→</i></span></div>
+    </a>
+    <a class="item" href="madis/">
+      <div class="shot"><img src="shots/madis.jpg" alt="Первый экран сайта Мадис"></div>
+      <div class="meta"><div class="row"><span class="niche">Мебель на&nbsp;заказ</span><span class="style">стиль Stykka</span></div><h2>Мадис</h2><p>Улица Джамбула, 49 · ★ 5,0 и&nbsp;29 отзывов в&nbsp;2ГИС</p><span class="go">Открыть сайт <i>→</i></span></div>
+    </a>
+    <a class="item" href="https://funrw1234-del.github.io/real-avtoservis/">
+      <div class="shot"><img src="shots/real.jpg" alt="Первый экран сайта автосервиса Реал"></div>
+      <div class="meta"><div class="row"><span class="niche">Автосервис</span><span class="style">стиль Lamborghini</span></div><h2>Реал</h2><p>Большая улица, 108Б · автосервис</p><span class="go">Открыть сайт <i>→</i></span></div>
+    </a>
+  </main>
+  <footer class="foot">Демо-версии, сделаны для&nbsp;показа владельцам. Стили подобраны в&nbsp;библиотеке Refero.</footer>
+</div>
+<script>
+(function(){var it=document.querySelectorAll('.item');
+if(!('IntersectionObserver' in window)){it.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('in')},i*90);io.unobserve(e.target)}})},{threshold:.1});
+it.forEach(function(e){io.observe(e)});})();
+</script>
+</body>
+</html>
