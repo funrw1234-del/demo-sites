@@ -4,270 +4,328 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Спектр Строй · ремонт помещений в Хабаровске</title>
-<meta name="description" content="Ремонт помещений, кровельные, электромонтажные и фасадные работы, строительство бань и саун. Хабаровск, улица Ленина, 57.">
+<title>Спектр Строй · ремонт квартир, бани и фасады в Хабаровске</title>
+<meta name="description" content="Ремонт помещений, электромонтаж, кровля, фасадные работы, строительство бань и саун. Хабаровск, улица Ленина, 57.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 html,body{overflow-x:clip}
-:root{--bg:#f2f0ed;--ink:#050505;--olive:#41443e;--taupe:#978f84;--line:#c1bfbc;--pad:clamp(16px,5vw,96px)}
+:root{--bg:#141311;--bg2:#1b1a17;--cream:#efe9df;--sand:#cfc6b8;--brass:#b8925a;--mut:#8f877a;--line:#2d2a26;--pad:clamp(16px,4.5vw,72px);--max:1680px}
 *{box-sizing:border-box;margin:0;padding:0}
-html{background:var(--bg)}
-body{background:var(--bg);color:var(--ink);font:300 17px/1.65 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{background:var(--bg)}
+body{color:var(--cream);font:300 17px/1.65 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-.wrap{padding:0 var(--pad);max-width:1680px;margin:0 auto}
-.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;letter-spacing:-.02em;line-height:.9}
-.cap{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;color:var(--taupe)}
-.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 28px;border:1px solid currentColor;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;transition:background .3s,color .3s}
-.btn:hover{background:var(--ink);color:var(--bg)}
-.btn.fill{background:var(--ink);color:var(--bg);border-color:var(--ink)}.btn.fill:hover{background:var(--olive);border-color:var(--olive)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;letter-spacing:-.02em;line-height:.95}
+.serif em{color:var(--brass)}
+.cap{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--brass)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;border:1px solid var(--cream);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;transition:background .35s,color .35s,border-color .35s}
+.btn:hover{background:var(--cream);color:var(--bg)}
+.btn.f{background:var(--brass);border-color:var(--brass);color:#141311}
+.btn.f:hover{background:var(--cream);border-color:var(--cream)}
+.sec{padding-top:clamp(80px,11vw,170px);padding-bottom:clamp(80px,11vw,170px)}
 /* header */
-.hdr{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px max(var(--pad),calc((100vw - 1680px)/2 + var(--pad)));transition:background .4s,padding .4s}
-.hdr.on{background:rgba(242,240,237,.92);backdrop-filter:blur(10px);padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-.logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:500;letter-spacing:-.01em}
-.nav{display:flex;gap:34px}.nav a{font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-.nav a:hover{color:var(--taupe)}
+.hdr{position:fixed;inset:0 0 auto;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:24px max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));transition:background .4s,padding .4s}
+.hdr::before{content:"";position:absolute;inset:0 0 -40px;z-index:-1;background:linear-gradient(rgba(20,19,17,.78),rgba(20,19,17,0));transition:opacity .4s;pointer-events:none}
+.hdr.on::before{opacity:0}
+.hdr.on{background:rgba(20,19,17,.88);backdrop-filter:blur(12px);padding-top:14px;padding-bottom:14px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:400}
+.nav{display:flex;gap:32px}.nav a{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);transition:color .3s}
+.nav a:hover{color:var(--brass)}
 .tel{font-size:15px;font-weight:400}
 /* hero */
-.hero{position:relative;padding-top:130px;min-height:100vh}
-.hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:end}
-.hero-img{height:min(76vh,820px);overflow:hidden;position:relative}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);min-height:100vh;min-height:100svh}
+.hl{padding:clamp(96px,14vh,130px) var(--pad) clamp(28px,5vh,46px) max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(16px,2.8vh,28px)}
+.hero h1{font-size:clamp(44px,min(6.2vw,10vh),118px)}
+.hero h1 .w{display:block;overflow:hidden;padding:.1em 0 .22em;margin:-.1em 0 -.22em}
+.hero h1 .w span{display:inline-block}
+.hero h1 em{font-style:italic}
+.bline{width:120px;height:1px;background:var(--brass);transform-origin:left}
+.hl p{max-width:440px;color:var(--sand);font-size:18px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:clamp(24px,3vw,48px);border-top:1px solid var(--line);padding-top:clamp(14px,2.4vh,24px)}
+.stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(34px,min(3.4vw,5.6vh),52px);font-weight:300;line-height:1}
+.stats span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.hr{position:relative;overflow:hidden;background:#0d0c0b}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .slide.on{opacity:1;z-index:1}
-.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 7s linear}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 7s linear}
 .slide.on img{transform:scale(1)}
-.sl-ui{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;align-items:center;gap:18px;padding:60px 24px 20px;background:linear-gradient(transparent,rgba(5,5,5,.55));color:#f2f0ed}
-.sl-n{font-family:"Cormorant Garamond",serif;font-size:22px;white-space:nowrap}
-.sl-cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-.sl-bar{flex:1;height:1px;background:rgba(242,240,237,.35);position:relative;overflow:hidden;min-width:40px}
-.sl-bar i{position:absolute;inset:0;background:#f2f0ed;transform-origin:left;transform:scaleX(0)}
-.sl-bar i.run{animation:slbar 5.5s linear forwards}
-@keyframes slbar{to{transform:scaleX(1)}}
-.sl-btn{width:44px;height:44px;border:1px solid rgba(242,240,237,.6);border-radius:50%;display:grid;place-items:center;background:none;color:inherit;cursor:pointer;font-size:18px;transition:background .3s,color .3s;flex:0 0 auto}
-.sl-btn:hover{background:#f2f0ed;color:#050505}
-.hero h1{font-size:clamp(52px,6vw,115px);position:relative;z-index:2;margin-top:clamp(16px,3vw,40px);white-space:nowrap}
-.hero h1 .l2{display:block;padding-left:.45em;font-style:italic}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.12em .14em .26em 0;margin:-.12em -.14em -.26em 0}
-.hero h1 .w span{display:inline-block}
-.hero-meta{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;padding-bottom:10px}
-.hero-meta p{font-size:clamp(17px,1.4vw,20px);max-width:420px}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(60px,8vw,120px)}
-.stats div{padding:28px 20px;border-right:1px solid var(--line)}
-.stats div:last-child{border-right:0}
-.stats b{display:block;font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(40px,4.5vw,72px);line-height:1}
-.stats span{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
-/* intro */
-.sec{padding-top:clamp(70px,10vw,160px);padding-bottom:clamp(70px,10vw,160px)}
-.intro{display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,1fr);gap:40px}
-.intro h2{font-size:clamp(40px,5.4vw,92px)}
-.intro h2 em{color:var(--taupe)}
+.hr::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(20,19,17,.5),transparent 28%),linear-gradient(0deg,rgba(20,19,17,.7),transparent 34%);pointer-events:none}
+.sl-ui{position:absolute;z-index:3;left:30px;right:24px;bottom:26px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.room{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,2.4vw,36px);font-style:italic;line-height:1.1}
+.room small{display:block;font-family:Jost;font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--sand);margin-bottom:6px}
+.thumbs{display:flex;gap:8px}
+.thumbs button{position:relative;width:clamp(46px,4.2vw,84px);aspect-ratio:4/3;overflow:hidden;opacity:.5;transition:opacity .3s;outline:1px solid transparent}
+.thumbs button img{width:100%;height:100%;object-fit:cover}
+.thumbs button.on{opacity:1;outline-color:var(--cream)}
+.thumbs button i{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left}
+.thumbs button.on i{animation:prog 5.5s linear forwards}
+@keyframes prog{to{transform:scaleX(1)}}
+/* marquee */
+.mq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:22px 0}
+.mq-t{display:flex;width:max-content}
+.mq-t div{font-family:"Cormorant Garamond",serif;font-size:clamp(28px,3.4vw,52px);font-style:italic;white-space:nowrap;padding-right:30px;color:var(--sand)}
+.mq-t b{color:var(--brass);font-style:normal;font-weight:300;margin:0 22px}
+/* zoom */
+.zoom{position:relative;height:100vh;overflow:hidden}
+.zoom-img{position:absolute;inset:0}
+.zoom-img img{width:100%;height:100%;object-fit:cover}
+.zoom-w{position:absolute;top:50%;transform:translateY(-50%);z-index:2;font-size:clamp(40px,5.4vw,104px);white-space:nowrap}
+.zoom-w.l{right:calc(50% + 19vw)}.zoom-w.r{left:calc(50% + 19vw)}
+.zoom-cap{position:absolute;z-index:3;left:0;right:0;bottom:7vh;text-align:center;opacity:0}
+.zoom-cap p{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,3vw,46px);line-height:1.15;max-width:900px;margin:0 auto;padding:0 var(--pad);text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.zoom-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,9,.88),rgba(10,10,9,.35) 38%,transparent 60%)}
 /* services */
-.svc{margin-top:clamp(40px,5vw,80px);border-top:1px solid var(--ink)}
-.svc li{list-style:none;display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,.8fr);gap:20px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);position:relative;cursor:default;transition:padding .4s}
-.svc li:hover{padding-left:14px}
-.svc .n{font-size:13px;letter-spacing:.2em;color:var(--taupe)}
-.svc h3{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(32px,4vw,64px);line-height:1}
-.svc p{color:#55524d}
-.peek{position:fixed;width:280px;aspect-ratio:3/4;pointer-events:none;z-index:40;opacity:0;overflow:hidden;transform:translate(-50%,-50%) scale(.85)}
-.peek img{width:100%;height:100%;object-fit:cover}
-/* dark gallery */
-.dark{background:var(--olive);color:var(--bg)}
-.dark .cap{color:#b9b2a7}
-.gal-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.gal-h h2{font-size:clamp(56px,9vw,150px)}
-.gal-h p{max-width:360px;color:#cfc9c0}
-.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,26px);margin-top:clamp(40px,6vw,90px);align-items:start}
-.gal .col{display:grid;gap:clamp(12px,1.6vw,26px)}
-.gal .col:nth-child(2){margin-top:clamp(40px,8vw,140px)}
-.gal figure{overflow:hidden}
-.gal img{width:100%;height:auto;transform-origin:center}
+.svc-h{display:grid;grid-template-columns:minmax(0,.45fr) minmax(0,1fr);gap:40px;align-items:end}
+.svc-h h2{font-size:clamp(42px,5.2vw,92px)}
+.svc{margin-top:clamp(40px,5vw,80px);list-style:none}
+.svc li{position:relative;display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:20px;align-items:center;padding:30px 0;border-top:1px solid var(--line)}
+.svc li:last-child{border-bottom:1px solid var(--line)}
+.svc li::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.svc li:hover::after{transform:scaleX(1)}
+.svc .n{font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--brass)}
+.svc h3{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(32px,4.2vw,70px);line-height:1;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.svc li:hover h3{transform:translateX(18px)}
+.svc p{color:var(--mut);font-size:15px;max-width:300px;text-align:right}
+/* objects */
+.obj{background:var(--bg2);overflow:hidden}
+.obj-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,60px)}
+.obj-h h2{font-size:clamp(52px,8vw,150px)}
+.obj-h p{color:var(--sand);max-width:360px}
+.track{display:flex;gap:18px;width:max-content;padding:0 max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)))}
+.card{flex:0 0 auto;width:clamp(260px,30vw,480px)}
+.card figure{overflow:hidden;aspect-ratio:4/5}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.06)}
+.card div{display:flex;justify-content:space-between;gap:12px;padding-top:14px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.card b{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:26px}
+.card span{font-size:12px;letter-spacing:.18em;color:var(--mut);padding-top:8px}
 /* reviews */
-.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px);margin-top:clamp(40px,5vw,80px)}
-.rv article{border-top:1px solid var(--ink);padding-top:24px;display:flex;flex-direction:column;gap:22px}
-.rv q{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,2vw,32px);line-height:1.2;font-weight:400;quotes:"«" "»"}
-.rv span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);margin-top:auto}
-.rv-big{font-size:clamp(46px,7vw,120px);text-align:center;max-width:1200px;margin:0 auto}
-.rv-big em{color:var(--taupe)}
+.rvw{background:var(--cream);color:#141311}
+.rvw .cap{color:#8a6a3a}
+.rv-wrap{display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);align-items:start}
+.rv-side h2{font-size:clamp(46px,5vw,86px);margin:18px 0 30px}
+.rv-side h2 em{color:#8a6a3a}
+.rv-score{display:flex;align-items:baseline;gap:14px;border-top:1px solid #cdc3b4;padding-top:20px}
+.rv-score b{font-family:"Cormorant Garamond",serif;font-size:72px;font-weight:300;line-height:1}
+.rv-score span{font-size:14px;color:#6c6355}
+.rv-stage{display:grid}
+.rv-item{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease,visibility 0s .7s}
+.rv-item.on{opacity:1;visibility:visible;transform:none;transition:opacity .7s ease .15s,transform .7s ease .15s,visibility 0s}
+.rv-item q{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(28px,3vw,50px);line-height:1.15;font-weight:400;quotes:"«" "»"}
+.rv-item span{display:block;margin-top:28px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#6c6355}
+.rv-ctrl{display:flex;align-items:center;gap:16px;margin-top:44px}
+.rv-ctrl button.arr{width:52px;height:52px;border:1px solid #141311;border-radius:50%;font-size:18px;transition:background .3s,color .3s}
+.rv-ctrl button.arr:hover{background:#141311;color:var(--cream)}
+.dots{display:flex;gap:8px;margin-left:10px}
+.dots button{width:28px;height:2px;background:#cdc3b4;transition:background .3s}
+.dots button.on{background:#141311}
+.rv-all{margin-left:auto;font-size:12px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid #141311;padding-bottom:3px}
 /* contacts */
-.ct{border-top:1px solid var(--line)}
-.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);margin-top:clamp(40px,5vw,70px)}
-.ct h2{font-size:clamp(56px,10vw,170px)}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,90px)}
+.ct h2{font-size:clamp(54px,8vw,140px)}
 .ct dl{display:grid;gap:26px}
+.ct dt{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
 .ct dd{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,2.4vw,38px);line-height:1.15;margin-top:6px}
-.ct dd a:hover{color:var(--taupe)}
-.ct-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:28px 0 36px;margin-top:clamp(50px,6vw,90px);border-top:1px solid var(--line);font-size:13px;color:var(--taupe)}
+.ct dd a:hover{color:var(--brass)}
+.ct-btns{display:flex;flex-wrap:wrap;gap:12px}
+.giant{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(64px,15.5vw,300px);line-height:.85;letter-spacing:-.03em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px #3a3631;margin-top:clamp(50px,7vw,110px)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:26px 0 36px;margin-top:30px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
 @media (max-width:900px){
  .nav{display:none}
- .hero{min-height:0}
- .hero-grid,.intro,.ct-grid{grid-template-columns:minmax(0,1fr)}
- .hero-img{height:auto;aspect-ratio:1/1;order:-1}
- .hero h1{font-size:clamp(44px,13vw,100px)}
- .sl-cap{display:none}
- .sl-ui{padding:50px 14px 14px;gap:12px}
- .hero h1 .l2{padding-left:.35em}
- .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
- .stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
- .svc li{grid-template-columns:44px minmax(0,1fr)}.svc p{grid-column:2}
- .gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gal .col:nth-child(3){display:none}
- .rv{grid-template-columns:minmax(0,1fr)}
- .peek{display:none}
+ .hero{grid-template-columns:minmax(0,1fr);min-height:0}
+ .hr{height:64vh;order:-1}
+ .hl{padding:30px var(--pad) 44px}
+ .hero h1{font-size:clamp(42px,11.5vw,80px)}
+ .sl-ui{left:var(--pad);right:var(--pad);bottom:18px;flex-direction:column;align-items:flex-start}
+ .thumbs button{width:clamp(36px,13vw,52px)}
+ .thumbs{gap:6px}
+ .zoom{height:auto}
+ .zoom-img{position:relative;height:70vh}
+ .zoom-w{position:static;transform:none;display:block;font-size:clamp(40px,12vw,72px);padding:0 var(--pad)}
+ .zoom-w.l{margin:50px 0 6px}.zoom-w.r{text-align:right;margin-bottom:26px}
+ .zoom-cap{position:static;opacity:1;padding:24px 0 0}
+ .svc-h,.rv-wrap,.ct-grid{grid-template-columns:minmax(0,1fr)}
+ .svc li{grid-template-columns:44px minmax(0,1fr)}
+ .svc p{grid-column:2;text-align:left}
+ .track{overflow-x:auto;width:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+ .card{width:76vw;scroll-snap-align:start}
+ .rv-all{margin-left:0;width:100%;text-align:center;border:0;margin-top:8px}
+ .rv-ctrl{flex-wrap:wrap}
 }
-@media (max-width:420px){.tel{font-size:13px}}
 html.js [data-r]{opacity:0;transform:translateY(36px)}
 </style>
 </head>
 <body>
 <header class="hdr" id="hdr">
   <a class="logo" href="#top">Спектр Строй</a>
-  <nav class="nav"><a href="#services">Работы</a><a href="#projects">Объекты</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+  <nav class="nav"><a href="#services">Работы</a><a href="#objects">Объекты</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
   <a class="tel" href="tel:+79144177334">+7 914 417-73-34</a>
 </header>
 
 <main id="top">
-<section class="hero wrap">
-  <div class="hero-grid">
-    <div class="hero-meta">
-      <span class="cap">Хабаровск · ремонт и&nbsp;строительство</span>
-      <h1 class="serif"><span class="w"><span>Ремонт</span></span><span class="l2"><span class="w"><span>с&nbsp;характером</span></span></span></h1>
-      <p data-r>Ремонт квартир и&nbsp;помещений. Также кровельные, электромонтажные и&nbsp;фасадные работы, строим бани и&nbsp;сауны.</p>
-      <div data-r style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn fill" href="https://wa.me/79144177334" target="_blank" rel="noopener">Обсудить ремонт</a><a class="btn" href="#projects">Смотреть объекты</a></div>
-    </div>
-    <div class="hero-img" id="slider">
-      <figure class="slide on" data-cap="Кухня-гостиная"><img src="img/p22.webp" alt="Кухня-гостиная с серым диваном" fetchpriority="high"></figure>
-      <figure class="slide" data-cap="Гостиная"><img src="img/p16.webp" alt="Гостиная с подсветкой потолка"></figure>
-      <figure class="slide" data-cap="Кухня"><img src="img/p20.webp" alt="Кухня с барной стойкой"></figure>
-      <figure class="slide" data-cap="Ванная комната"><img src="img/p21.webp" alt="Ванная с зеркалом с подсветкой"></figure>
-      <figure class="slide" data-cap="Кухня-гостиная"><img src="img/p47.webp" alt="Кухня-гостиная с деревянной колонной"></figure>
-      <figure class="slide" data-cap="Ванная комната"><img src="img/p17.webp" alt="Ванная с отдельно стоящей ванной у окна"></figure>
-      <div class="sl-ui"><span class="sl-n"><b id="slN">01</b> / 06</span><span class="sl-cap" id="slCap">Кухня-гостиная</span><span class="sl-bar"><i id="slBar"></i></span><button class="sl-btn" id="slPrev" aria-label="Предыдущее фото">←</button><button class="sl-btn" id="slNext" aria-label="Следующее фото">→</button></div>
+<section class="hero">
+  <div class="hl">
+    <span class="cap" data-r>Хабаровск · ремонт и&nbsp;строительство</span>
+    <h1 class="serif"><span class="w"><span>Ремонт</span></span><span class="w"><span>квартир,</span></span><span class="w"><span><em>бани и&nbsp;фасады</em></span></span></h1>
+    <div class="bline" id="bline"></div>
+    <p data-r>Ремонт помещений, электромонтаж, кровля, фасадные работы и&nbsp;строительство бань и&nbsp;саун.</p>
+    <div class="hbtns" data-r><a class="btn f" href="https://wa.me/79144177334" target="_blank" rel="noopener">Обсудить ремонт</a><a class="btn" href="#objects">Смотреть объекты</a></div>
+    <div class="stats" data-r><div><b data-count="4.6" data-dec="1">4,6</b><span>в&nbsp;2ГИС</span></div><div><b data-count="46">46</b><span>отзывов</span></div><div><b data-count="536">536</b><span>фото в&nbsp;2ГИС</span></div></div>
+  </div>
+  <div class="hr" id="slider">
+    <figure class="slide on" data-cap="Гостиная"><img src="img/p16.webp" alt="Гостиная с подсветкой потолка и видом на город" fetchpriority="high"></figure>
+    <figure class="slide" data-cap="Кухня"><img src="img/p20.webp" alt="Кухня с барной стойкой"></figure>
+    <figure class="slide" data-cap="Ванная комната"><img src="img/p21.webp" alt="Ванная с зеркалом с подсветкой"></figure>
+    <figure class="slide" data-cap="Кухня-гостиная"><img src="img/p22.webp" alt="Кухня-гостиная с серым диваном"></figure>
+    <figure class="slide" data-cap="Санузел"><img src="img/p32.webp" alt="Санузел в тёмном мраморе"></figure>
+    <figure class="slide" data-cap="Кухня-гостиная"><img src="img/p47.webp" alt="Кухня-гостиная с деревянной колонной"></figure>
+    <div class="sl-ui">
+      <div class="room"><small id="slN">01 / 06</small><span id="slCap">Гостиная</span></div>
+      <div class="thumbs" id="thumbs"></div>
     </div>
   </div>
-  <div class="stats" data-r>
-    <div><b>4,6</b><span>оценка в&nbsp;2ГИС</span></div>
-    <div><b>46</b><span>отзывов</span></div>
-    <div><b>5</b><span>направлений работ</span></div>
-    <div><b>9–18</b><span>пн–пт, ул.&nbsp;Ленина,&nbsp;57</span></div>
-  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="mq-t" id="mq"><div>Ремонт помещений<b>✦</b>Электромонтаж<b>✦</b>Кровельные работы<b>✦</b>Фасадные работы<b>✦</b>Бани и&nbsp;сауны<b>✦</b></div><div>Ремонт помещений<b>✦</b>Электромонтаж<b>✦</b>Кровельные работы<b>✦</b>Фасадные работы<b>✦</b>Бани и&nbsp;сауны<b>✦</b></div></div></div>
+
+<section class="zoom" id="zoom">
+  <div class="zoom-img" id="zoomImg"><img src="img/p3.webp" alt="Кухня с мраморным полом" loading="lazy"></div>
+  <span class="zoom-w l serif" id="zl">От&nbsp;кухни</span>
+  <span class="zoom-w r serif" id="zr"><em>до&nbsp;фасада</em></span>
+  <div class="zoom-cap" id="zcap"><p>Квартиры, ванные комнаты и&nbsp;кухни, кровля, фасады, бани и&nbsp;сауны</p></div>
 </section>
 
 <section class="sec wrap" id="services">
-  <div class="intro">
-    <span class="cap">Чем занимаемся</span>
-    <h2 class="serif" data-r>От&nbsp;ванной комнаты до&nbsp;фасада <em>и&nbsp;бани на&nbsp;участке</em></h2>
-  </div>
+  <div class="svc-h"><span class="cap">Чем занимаемся</span><h2 class="serif" data-r>Пять направлений <em>работ</em></h2></div>
   <ul class="svc">
-    <li data-img="img/p21.webp"><span class="n">01</span><h3>Ремонт помещений</h3><p>Квартиры, ванные комнаты, кухни, восстановление после потопа.</p></li>
-    <li><span class="n">02</span><h3>Электромонтажные работы</h3><p></p></li>
-    <li><span class="n">03</span><h3>Кровельные работы</h3><p></p></li>
-    <li><span class="n">04</span><h3>Фасадные работы</h3><p></p></li>
-    <li><span class="n">05</span><h3>Строительство бань и&nbsp;саун</h3><p></p></li>
+    <li data-r><span class="n">01</span><h3>Ремонт помещений</h3><p>Квартиры, ванные, кухни, восстановление после потопа</p></li>
+    <li data-r><span class="n">02</span><h3>Электромонтажные работы</h3><p></p></li>
+    <li data-r><span class="n">03</span><h3>Кровельные работы</h3><p></p></li>
+    <li data-r><span class="n">04</span><h3>Фасадные работы</h3><p></p></li>
+    <li data-r><span class="n">05</span><h3>Строительство бань и&nbsp;саун</h3><p></p></li>
   </ul>
 </section>
 
-<section class="sec dark" id="projects">
-  <div class="wrap">
-    <div class="gal-h"><div><span class="cap">Объекты</span><h2 class="serif" data-r>Интерьеры</h2></div><p data-r>Фотографии из&nbsp;карточки компании в&nbsp;2ГИС.</p></div>
-    <div class="gal">
-      <div class="col" data-speed="-6">
-        <figure><img src="img/p16.webp" alt="Гостиная с подсветкой потолка" loading="lazy"></figure>
-        <figure><img src="img/p32.webp" alt="Ванная в тёмном мраморе" loading="lazy"></figure>
-        <figure><img src="img/p26.webp" alt="Гостиная с серым диваном" loading="lazy"></figure>
+<section class="sec obj" id="objects">
+  <div class="wrap obj-h"><div><span class="cap">Объекты</span><h2 class="serif" data-r>Интерьеры</h2></div><p data-r>Фотографии из&nbsp;карточки компании в&nbsp;2ГИС. Там их&nbsp;больше пятисот.</p></div>
+  <div class="track" id="track">
+    <a class="card"><figure><img src="img/p22.webp" alt="Кухня-гостиная" loading="lazy"></figure><div><b>Кухня-гостиная</b><span>01</span></div></a>
+    <a class="card"><figure><img src="img/p17.webp" alt="Ванная с окном" loading="lazy"></figure><div><b>Ванная с&nbsp;окном</b><span>02</span></div></a>
+    <a class="card"><figure><img src="img/p19.webp" alt="Светлая кухня" loading="lazy"></figure><div><b>Светлая кухня</b><span>03</span></div></a>
+    <a class="card"><figure><img src="img/p45.webp" alt="Санузел с нишами" loading="lazy"></figure><div><b>Санузел</b><span>04</span></div></a>
+    <a class="card"><figure><img src="img/p38.webp" alt="Столовая" loading="lazy"></figure><div><b>Столовая</b><span>05</span></div></a>
+    <a class="card"><figure><img src="img/p18.webp" alt="Ванная в дереве" loading="lazy"></figure><div><b>Ванная в&nbsp;дереве</b><span>06</span></div></a>
+    <a class="card"><figure><img src="img/p26.webp" alt="Гостиная" loading="lazy"></figure><div><b>Гостиная</b><span>07</span></div></a>
+    <a class="card"><figure><img src="img/p3.webp" alt="Кухня с мраморным полом" loading="lazy"></figure><div><b>Кухня</b><span>08</span></div></a>
+  </div>
+</section>
+
+<section class="sec rvw" id="reviews">
+  <div class="wrap rv-wrap">
+    <div class="rv-side">
+      <span class="cap">Отзывы из&nbsp;2ГИС</span>
+      <h2 class="serif">«Картинка стала <em>реальностью</em>»</h2>
+      <div class="rv-score"><b>4,6</b><span>средняя оценка<br>46 отзывов</span></div>
+    </div>
+    <div>
+      <div class="rv-stage" id="rvStage">
+        <div class="rv-item on"><q>Ребята делали нам весь ремонт полностью. Сроки соблюдали, по&nbsp;стоимости всё было прозрачно и&nbsp;понятно.</q><span>Кристина С.</span></div>
+        <div class="rv-item"><q>Особенно удалась стена с&nbsp;молдингами. Ювелирная работа. В&nbsp;целом ремонтом довольна.</q><span>Ольга С.</span></div>
+        <div class="rv-item"><q>Конкретная смета, в&nbsp;которой всё понятно. Конкретика в&nbsp;словах. Сроки. Качество. Ответственность.</q><span>Сергей</span></div>
+        <div class="rv-item"><q>Все работы выполнены профессионально, точно в&nbsp;срок, а&nbsp;результат полностью соответствует нашим ожиданиям и&nbsp;даже превзошёл их.</q><span>Кристина Г.</span></div>
       </div>
-      <div class="col" data-speed="6">
-        <figure><img src="img/p20.webp" alt="Кухня с барной стойкой" loading="lazy"></figure>
-        <figure><img src="img/p42.webp" alt="Ванна с подсветкой и мраморной плиткой" loading="lazy"></figure>
-        <figure><img src="img/p47.webp" alt="Кухня-гостиная с деревянной колонной" loading="lazy"></figure>
-      </div>
-      <div class="col" data-speed="-10">
-        <figure><img src="img/p19.webp" alt="Светлая кухня с островом" loading="lazy"></figure>
-        <figure><img src="img/p45.webp" alt="Санузел с душевой и нишами" loading="lazy"></figure>
-        <figure><img src="img/p21.webp" alt="Ванная с зеркалом с подсветкой" loading="lazy"></figure>
-      </div>
+      <div class="rv-ctrl"><button class="arr" id="rvPrev" aria-label="Предыдущий отзыв">←</button><button class="arr" id="rvNext" aria-label="Следующий отзыв">→</button><div class="dots" id="rvDots"></div><a class="rv-all" href="https://2gis.ru/khabarovsk/firm/70000001072274347/tab/reviews" target="_blank" rel="noopener">Все отзывы</a></div>
     </div>
   </div>
 </section>
 
-<section class="sec wrap" id="reviews">
-  <h2 class="serif rv-big" data-r>«Картинка стала реальностью» <em>отзывы клиентов</em></h2>
-  <div class="rv">
-    <article data-r><q>Ребята делали нам весь ремонт полностью. Сроки соблюдали, по&nbsp;стоимости всё было прозрачно и&nbsp;понятно.</q><span>Кристина С. · 2ГИС</span></article>
-    <article data-r><q>Особенно удалась стена с&nbsp;молдингами. Ювелирная работа. В&nbsp;целом ремонтом довольна.</q><span>Ольга С. · 2ГИС</span></article>
-    <article data-r><q>Конкретная смета, в&nbsp;которой всё понятно. Конкретика в&nbsp;словах. Сроки. Качество. Ответственность.</q><span>Сергей · 2ГИС</span></article>
-  </div>
-  <div style="margin-top:48px;text-align:center"><a class="btn" href="https://2gis.ru/khabarovsk/firm/70000001072274347/tab/reviews" target="_blank" rel="noopener">Все отзывы в&nbsp;2ГИС</a></div>
-</section>
-
 <section class="sec wrap ct" id="contacts">
-  <span class="cap">Контакты</span>
   <div class="ct-grid">
-    <h2 class="serif" data-r>Обсудим<br><em>ваш ремонт</em></h2>
+    <div><span class="cap">Контакты</span><h2 class="serif" style="margin-top:18px" data-r>Обсудим<br><em>ваш ремонт</em></h2></div>
     <dl>
-      <div><dt class="cap">Офис</dt><dd>Хабаровск, улица Ленина, 57</dd></div>
-      <div><dt class="cap">Часы</dt><dd>Понедельник–пятница, 9:00–18:00</dd></div>
-      <div><dt class="cap">Телефон</dt><dd><a href="tel:+79144177334">+7 914 417-73-34</a></dd></div>
-      <div><dt class="cap">Оплата</dt><dd>Картой, наличными, через банк, по&nbsp;QR-коду</dd></div>
-      <div class="ct-btns">
-        <a class="btn fill" href="https://wa.me/79144177334" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="https://t.me/+79144177334" target="_blank" rel="noopener">Telegram</a>
-        <a class="btn" href="https://2gis.ru/khabarovsk/firm/70000001072274347" target="_blank" rel="noopener">2ГИС</a>
-      </div>
+      <div><dt>Офис</dt><dd>Хабаровск, улица Ленина, 57</dd></div>
+      <div><dt>Часы</dt><dd>Понедельник–пятница, 9:00–18:00</dd></div>
+      <div><dt>Телефон</dt><dd><a href="tel:+79144177334">+7 914 417-73-34</a></dd></div>
+      <div><dt>Оплата</dt><dd>Картой, наличными, через банк, по&nbsp;QR-коду</dd></div>
+      <div class="ct-btns"><a class="btn f" href="https://wa.me/79144177334" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://t.me/+79144177334" target="_blank" rel="noopener">Telegram</a><a class="btn" href="https://2gis.ru/khabarovsk/firm/70000001072274347" target="_blank" rel="noopener">2ГИС</a></div>
     </dl>
   </div>
+  <div class="giant" aria-hidden="true">Спектр Строй</div>
   <div class="foot"><span>Демо-версия сайта. Данные из&nbsp;открытой карточки 2ГИС.</span><a href="../">Другие демо-сайты</a></div>
 </section>
 </main>
-<div class="peek" id="peek"><img alt=""></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
+/* слайдер первого экрана: работает и без GSAP */
 (function(){
-  var sl=document.getElementById('slider'),sd=[].slice.call(sl.querySelectorAll('.slide')),cur=0,tm,bar=document.getElementById('slBar');
-  function go(n){sd[cur].classList.remove('on');cur=(n+sd.length)%sd.length;sd[cur].classList.add('on');
-    document.getElementById('slN').textContent=('0'+(cur+1)).slice(-2);document.getElementById('slCap').textContent=sd[cur].dataset.cap;
-    bar.classList.remove('run');void bar.offsetWidth;bar.classList.add('run');clearTimeout(tm);tm=setTimeout(function(){go(cur+1)},5500)}
-  document.getElementById('slPrev').onclick=function(){go(cur-1)};document.getElementById('slNext').onclick=function(){go(cur+1)};
-  var x0=null;sl.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  var sd=[].slice.call(document.querySelectorAll('#slider .slide')),th=document.getElementById('thumbs'),cur=0,tm;
+  sd.forEach(function(s,i){var b=document.createElement('button');b.setAttribute('aria-label','Фото '+(i+1));b.innerHTML='<img src="'+s.querySelector('img').getAttribute('src')+'" alt=""><i></i>';b.onclick=function(){go(i)};th.appendChild(b)});
+  var tb=[].slice.call(th.children);
+  function go(n){sd[cur].classList.remove('on');tb[cur].classList.remove('on');cur=(n+sd.length)%sd.length;sd[cur].classList.add('on');
+    var b=tb[cur];b.classList.remove('on');void b.offsetWidth;b.classList.add('on');
+    document.getElementById('slN').textContent=('0'+(cur+1)).slice(-2)+' / 0'+sd.length;document.getElementById('slCap').textContent=sd[cur].dataset.cap;
+    clearTimeout(tm);tm=setTimeout(function(){go(cur+1)},5500)}
+  var sl=document.getElementById('slider'),x0=null;
+  sl.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
   sl.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));x0=null});
   go(0);
+})();
+/* отзывы */
+(function(){
+  var it=[].slice.call(document.querySelectorAll('#rvStage .rv-item')),dots=document.getElementById('rvDots'),cur=0,tm;
+  it.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Отзыв '+(i+1));b.onclick=function(){show(i)};dots.appendChild(b)});
+  var db=[].slice.call(dots.children);
+  function show(n){it.forEach(function(e){e.classList.remove('on')});db.forEach(function(e){e.classList.remove('on')});cur=(n+it.length)%it.length;it[cur].classList.add('on');db[cur].classList.add('on');clearTimeout(tm);tm=setTimeout(function(){show(cur+1)},7000)}
+  document.getElementById('rvPrev').onclick=function(){show(cur-1)};document.getElementById('rvNext').onclick=function(){show(cur+1)};
+  show(0);
 })();
 (function(){
   var hdr=document.getElementById('hdr');
   addEventListener('scroll',function(){hdr.classList.toggle('on',scrollY>30)},{passive:true});
-  if(!window.gsap){document.documentElement.classList.remove('js');return}
+  if(!window.gsap||!window.ScrollTrigger){document.documentElement.classList.remove('js');return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.08});lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0);
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-60})}})});
+  var lenis=window.Lenis?new Lenis({lerp:.09}):null;
+  if(lenis){lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t&&lenis){e.preventDefault();lenis.scrollTo(t,{offset:-60})}})});
 
-  gsap.from('.hero h1 .w span',{yPercent:150,duration:1.4,ease:'expo.out',stagger:.12,delay:.15});
-  gsap.fromTo('.hero-img',{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:1.5,ease:'expo.inOut'});
-
+  gsap.from('.hero h1 .w span',{yPercent:150,duration:1.4,ease:'expo.out',stagger:.1,delay:.15});
+  gsap.from('#bline',{scaleX:0,duration:1.2,ease:'expo.out',delay:.6});
+  gsap.fromTo('#slider',{clipPath:'inset(0 0 0 100%)'},{clipPath:'inset(0 0 0 0%)',duration:1.6,ease:'expo.inOut'});
   gsap.utils.toArray('[data-r]').forEach(function(el){
-    gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+    gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',delay:el.closest('.hero')?.5:0,scrollTrigger:{trigger:el,start:'top 90%',once:true}});
   });
-  gsap.utils.toArray('.gal figure').forEach(function(f){
-    gsap.fromTo(f,{clipPath:'inset(18% 8% 18% 8%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:f,start:'top 95%',end:'top 45%',scrub:true}});
-    gsap.fromTo(f.querySelector('img'),{scale:1.25},{scale:1,ease:'none',scrollTrigger:{trigger:f,start:'top 95%',end:'top 35%',scrub:true}});
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var end=+el.dataset.count,dec=+(el.dataset.dec||0),o={v:0};
+    ScrollTrigger.create({trigger:el,start:'top 95%',once:true,onEnter:function(){gsap.to(o,{v:end,duration:2,delay:.6,ease:'power2.out',onUpdate:function(){el.textContent=o.v.toFixed(dec).replace('.',',')}})}});
   });
-  ScrollTrigger.matchMedia({'(min-width: 901px)':function(){
-    gsap.utils.toArray('.gal .col').forEach(function(c){
-      gsap.to(c,{yPercent:+c.dataset.speed,ease:'none',scrollTrigger:{trigger:'.gal',start:'top bottom',end:'bottom top',scrub:true}});
-    });
-    var peek=document.getElementById('peek'),pi=peek.querySelector('img');
-    var xTo=gsap.quickTo(peek,'left',{duration:.5,ease:'power3'}),yTo=gsap.quickTo(peek,'top',{duration:.5,ease:'power3'});
-    document.querySelectorAll('.svc li[data-img]').forEach(function(li){
-      li.addEventListener('mouseenter',function(){pi.src=li.dataset.img;gsap.to(peek,{opacity:1,scale:1,duration:.4})});
-      li.addEventListener('mouseleave',function(){gsap.to(peek,{opacity:0,scale:.85,duration:.3})});
-    });
-    addEventListener('mousemove',function(e){xTo(e.clientX+170);yTo(e.clientY)});
-  }});
-  gsap.from('.svc li',{opacity:0,y:30,stagger:.08,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.svc',start:'top 85%',once:true}});
+  gsap.to('#mq',{xPercent:-50,duration:30,ease:'none',repeat:-1});
+
+  ScrollTrigger.matchMedia({
+    '(min-width: 901px)':function(){
+      var tl=gsap.timeline({scrollTrigger:{trigger:'#zoom',start:'top top',end:'+=140%',scrub:1,pin:true}});
+      tl.fromTo('#zoomImg',{clipPath:'inset(26% 32% 26% 32%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none'},0)
+        .fromTo('#zoomImg img',{scale:1.15},{scale:1,ease:'none'},0)
+        .to('#zl',{x:'-60vw',ease:'none',duration:.5},0)
+        .to('#zr',{x:'60vw',ease:'none',duration:.5},0)
+        .to('#zl,#zr',{opacity:0,ease:'none',duration:.3},0)
+        .to('#zcap',{opacity:1,ease:'none',duration:.3},.7);
+      var tr=document.getElementById('track');
+      gsap.to(tr,{x:function(){return -(tr.scrollWidth-innerWidth)},ease:'none',
+        scrollTrigger:{trigger:'#objects',start:'top top',end:function(){return '+='+(tr.scrollWidth-innerWidth)},scrub:1,pin:true,invalidateOnRefresh:true}});
+    },
+    '(max-width: 900px)':function(){
+      gsap.fromTo('#zoomImg',{clipPath:'inset(12% 10% 12% 10%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:'#zoomImg',start:'top 90%',end:'top 20%',scrub:true}});
+    }
+  });
+  gsap.from('.giant',{yPercent:40,opacity:0,duration:1.4,ease:'power3.out',scrollTrigger:{trigger:'.giant',start:'top 95%',once:true}});
   addEventListener('load',function(){ScrollTrigger.refresh()});
 })();
 </script>
